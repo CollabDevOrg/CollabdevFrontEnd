@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    width: 100%  ;
+    height: 80px;
+    border-bottom:solid rgb(75, 74, 74) 1px;
+    background-color: white;
+}
+
+.sousdiv1{
+    display: flex;
+    width: 75%; 
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sousdiv2{
+    width: 20%; 
+    border-left:solid rgb(75, 74, 74) 1px;
+    padding: 30px;
+}
+
+.bouton{
+    width: 150px;
+    height: 40px;
+    background-color: #334DAA;
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    margin-top: 18px;  
+    font-family:'Inter',sans-serif;
+    font-size: 13px; 
+    margin-right: 10px; 
+}
+.texteheader{
+    font-family:'Inter',sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.image{
+    width: 200px;
+    height:80px ;
+}
