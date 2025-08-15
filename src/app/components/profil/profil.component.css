@@ -174,6 +174,11 @@ app-side-bar {
   font-size: 0.9rem;
   font-weight: bold;
 }
+.idea-icon {
+  color: gold; /* jaune */
+  margin-right: 8px; /* espace entre l’icône et le texte */
+  font-size: 25px;
+}
 
 /* Avis */
 .feedback-box {

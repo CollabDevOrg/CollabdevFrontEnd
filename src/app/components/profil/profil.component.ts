@@ -30,10 +30,10 @@ export class ProfilComponent implements OnInit {
   profilId?: number;
   isEditOpen = false;
   // Champs de saisie pour l'édition
-  formEdit: { prenom: string; nom: string; email: string; genre?: string } = {
+  formEdit: { prenom: string; nom: string; genre?: string } = {
     prenom: '',
     nom: '',
-    email: '',
+    // email: '',
     genre: undefined,
   };
 
@@ -57,7 +57,7 @@ export class ProfilComponent implements OnInit {
           this.formEdit = {
             prenom: this.utilisateur.prenom,
             nom: this.utilisateur.nom,
-            email: this.utilisateur.email,
+            //email: this.utilisateur.email,
             genre: this.toShortGenre(this.utilisateur.genre),
           };
           // Préférences non éditées ici
@@ -115,7 +115,7 @@ export class ProfilComponent implements OnInit {
       id: this.utilisateur.id,
       prenom: this.formEdit.prenom,
       nom: this.formEdit.nom,
-      email: this.formEdit.email,
+      //email: this.formEdit.email,
       genre: this.toLongGenre(this.formEdit.genre || ''),
     } as any;
 

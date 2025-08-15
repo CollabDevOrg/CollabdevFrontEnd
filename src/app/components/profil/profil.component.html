@@ -86,7 +86,7 @@
                   : role === "CONTRIBUTEUR"
                   ? "Projets auxquels vous contribuez"
                   : role === "PORTEUR_PROJET"
-                  ? "Projets que vous avez proposés"
+                  ? "Vos idées de projet"
                   : "Vos contributions"
               }}
             </h3>
@@ -95,6 +95,10 @@
               class="contribution-list"
             >
               <div class="contribution-item" *ngFor="let projet of projets">
+                <i
+                  *ngIf="role === 'PORTEUR_PROJET'"
+                  class="ri-lightbulb-flash-line idea-icon"
+                ></i>
                 <h4>{{ projet.titre || projet.titreProjet }}</h4>
                 <p>{{ projet.description || projet.Description }}</p>
               </div>
@@ -104,7 +108,6 @@
             </ng-template>
           </div>
 
-          <!-- Carte des badges -->
           <!-- Carte des badges -->
           <div class="card" *ngIf="role === 'CONTRIBUTEUR'">
             <h3 class="section-title">Vos badges</h3>
@@ -157,10 +160,7 @@
             <span>Nom</span>
             <input type="text" [(ngModel)]="formEdit.nom" />
           </label>
-          <label class="grid-full">
-            <span>Email</span>
-            <input type="email" [(ngModel)]="formEdit.email" />
-          </label>
+
           <label class="grid-full" *ngIf="utilisateur.genre !== undefined">
             <span>Genre</span>
             <select [(ngModel)]="formEdit.genre">

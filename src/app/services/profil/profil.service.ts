@@ -99,7 +99,12 @@ export class UtilisateurService {
         }
         url = `${this.apiRoot}/utilisateurs/contributeurs/projets/${profilId}`;
         break;
+
       case 'PORTEUR_PROJET':
+        //  On va chercher ses idées de projets proposées
+        url = `${this.apiRoot}/utilisateurs/${id}/idees-projet`;
+        break;
+
       default:
         return of([]);
     }
